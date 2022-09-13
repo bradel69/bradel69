@@ -8,7 +8,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 # get external ip
 EXTERNAL_ATUAL_IP=$(curl -s http://whatismyip.akamai.com/)
 # verify last ip
-OLD_IP=$(cat old_ip.txt)
+OLD_IP=$(cat /root/scripts/old_ip.txt)
 # cretae file to send by email
 # write date
 date > /root/scripts/email_external_ip.txt
