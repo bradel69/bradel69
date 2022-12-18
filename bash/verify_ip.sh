@@ -21,5 +21,5 @@ if [ "$EXTERNAL_ATUAL_IP" = "$OLD_IP" ]; then
 else
   # if diferent send email
   mpack -s "external ip changed" /root/scripts/email_external_ip.txt email@server.com
-  echo "$EXTERNAL_ATUAL_IP" > old_ip.txt
+  echo "$EXTERNAL_ATUAL_IP" > /root/scripts/old_ip.txt
 fi
