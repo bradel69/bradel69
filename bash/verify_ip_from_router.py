@@ -1,7 +1,6 @@
 #!/bin/bash
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
-#EXTERNAL_ATUAL_IP=$(curl -s http://whatismyip.akamai.com/)
-EXTERNAL_ATUAL_IP=`python3 get_ip_from_router.py`
+EXTERNAL_ATUAL_IP=$(python3 /root/scripts/get_ip_from_router.py)
 OLD_IP=$(cat /root/scripts/old_ip.txt)
 date > /root/scripts/email_external_ip.txt
 echo "External IP address: $EXTERNAL_ATUAL_IP" >> /root/scripts/email_external_ip.txt
